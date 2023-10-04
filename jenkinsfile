@@ -17,7 +17,7 @@ pipeline {
         stage('demarrage du conteneur'){
             steps {
                 sh 'docker run -p 9090:80 -d --name serveur_quentin my_server:latest'
-                sh '"This is my super app" = "curl http://localhost:9090/"'
+                sh 'curl http://localhost:9090/'
                 sh 'docker rm -f serveur'
             }
         }
