@@ -20,8 +20,6 @@ pipeline {
                 sh 'docker rm -f serveur'
             }
         }
-
-
-        }
     }
 }
+
