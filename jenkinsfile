@@ -8,6 +8,7 @@ pipeline {
             steps {
                 sh 'docker run hello-world'
             }
+        }
         stage('execute docker') {
             steps {
                 sh 'docker build -t my_server:latest - < Dockerfile'
