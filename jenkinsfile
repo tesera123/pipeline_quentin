@@ -16,7 +16,7 @@ pipeline {
         }
         stage('demarrage du conteneur'){
             steps {
-                sh 'docker run -p 80:8090 -d --name serveur image:my_server'
+                sh 'docker run -p 80:8090 -d --name serveur my_server:latest'
                 sh 'docker rm -f serveur'
             }
         }
