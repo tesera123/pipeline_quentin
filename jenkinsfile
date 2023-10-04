@@ -13,13 +13,13 @@ pipeline {
             steps {
                 sh 'docker build -t my_server:latest - < Dockerfile'
             }
+        }
         stage('demarrage du conteneur'){
             steps {
                 sh 'docker run -p 80:8090 -d --name serveur image:my_server'
                 sh 'docker rm -f serveur'
             }
         }
-
 
 
         }
