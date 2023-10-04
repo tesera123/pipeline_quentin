@@ -22,9 +22,9 @@ pipeline {
                 sh 'docker rm -f serveur_quentin'
             }
         }
-        stage('MEP'){
+        stage('MEP') {
             steps {
-                docker-compose up -d --force-recreate
+                sh 'docker-compose up -d --force-recreate'
             }
     
         }
