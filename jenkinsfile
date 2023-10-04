@@ -7,7 +7,7 @@ upipeline {
         stage('demarrage test') {
             steps {
                 sh 'docker run hello-world'
-                echo "allo le monde, ca va??"
+                echo "allo le monde, ca va bien"
             }
         }
         stage('execute docker') {
