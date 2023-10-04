@@ -13,6 +13,16 @@ pipeline {
             steps {
                 sh 'docker build -t my_server:latest - < Dockerfile'
             }
+        stage('demarrage du conteneur'){
+            steps{
+                sh 'docker run -p 80:8090 -d --name serveur image:tag'
+                sh 'This is my super app" = "$(curl http://localhost:<port>/)'
+                sh 'docker rm -f serveur'
+            }
+        }
+
+
+
         }
     }
 }
